@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: webapp-pod
+  name: webapp-pod
+spec:
+  containers:
+    - image: kodekloud/simple-webapp-mysql
+      imagePullPolicy: Always
+      name: webapp
+      env:
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: DB_Host
+        - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: db-secret
+                key: DB_User
+        - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: db-secret
+                key: DB_Password
