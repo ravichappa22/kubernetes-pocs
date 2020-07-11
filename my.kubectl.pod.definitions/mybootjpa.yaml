@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mybootjpa
+spec:
+  selector:
+    matchLabels:
+      run: mybootjpa
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: mybootjpa
+    spec:
+      containers:
+      - name: mybootjpa
+        image: chapparavi22/mybootjpa
+        ports:
+        - containerPort: 8080
+

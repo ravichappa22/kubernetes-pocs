@@ -6,9 +6,8 @@ metadata:
   name: webapp-color
 spec:
   containers:
-  - env:
-    - name: APP_COLOR
-      value: green
-    image: nginx
-    imagePullPolicy: Always
-    name: nginx
+    - name : webapp-color
+      image: nginx
+      env:
+        - name: APP_COLOR
+          value: green
