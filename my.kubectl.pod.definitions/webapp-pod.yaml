@@ -6,7 +6,7 @@ metadata:
   name: webapp-pod
 spec:
   containers:
-    - image: kodekloud/simple-webapp-mysql
+    - image: nginx
       imagePullPolicy: Always
       name: webapp
       env:
