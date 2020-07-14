@@ -17,4 +17,20 @@ spec:
         image: chapparavi22/mybootjpa
         ports:
         - containerPort: 8080
+        env:
+          - name: ENV_PROP_DEF_PROP
+            valueFrom:
+              configMapKeyRef:
+                name: bootjpacgmp-2
+                key: env.prop.def.prop
+          - name: MESSAGE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: bootjpasecret
+                key: message.password
+          - name: MESSAGE_USER
+            valueFrom:
+              secretKeyRef:
+                name: bootjpasecret
+                key: message.user
 
