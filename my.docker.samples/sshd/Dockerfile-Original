@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+MAINTAINER chapparavi22@gmail.com
+RUN apt-get update && \
+    apt-get -y install openssh-server && \
+    apt-get -y install openssh-client
