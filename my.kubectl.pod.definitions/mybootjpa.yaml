@@ -15,13 +15,14 @@ spec:
       containers:
       - name: mybootjpa
         image: chapparavi22/mybootjpa
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
           - name: ENV_PROP_DEF_PROP
             valueFrom:
               configMapKeyRef:
-                name: bootjpacgmp-2
+                name: bootjpacgmp
                 key: env.prop.def.prop
           - name: MESSAGE_PASSWORD
             valueFrom:

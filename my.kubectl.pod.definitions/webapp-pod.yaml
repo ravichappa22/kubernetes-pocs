@@ -6,22 +6,22 @@ metadata:
   name: webapp-pod
 spec:
   containers:
-    - image: nginx
+      - image: nginx
       imagePullPolicy: Always
       name: webapp
       env:
-        - name: DB_HOST
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: DB_Host
-        - name: DB_USER
-            valueFrom:
-              secretKeyRef:
-                name: db-secret
-                key: DB_User
-        - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: db-secret
-                key: DB_Password
+       - name: DB_HOST
+         valueFrom:
+           secretKeyRef:
+             name: db-secret
+             key: DB_Host
+       - name: DB_USER
+           valueFrom:
+             secretKeyRef:
+               name: db-secret
+               key: DB_User
+       - name: DB_PASSWORD
+           valueFrom:
+             secretKeyRef:
+               name: db-secret
+               key: DB_Password

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: bootjpacgmp-2
+  name: bootjpacgmp
   namespace: dev
 data:
   env.prop.def.prop: test
