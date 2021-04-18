@@ -4,7 +4,7 @@ metadata:
   name: ubuntu-sleeper
 spec:
   containers:
-  - command:
+  -   command:
     - sleep
     - "4800"
     image: ubuntu

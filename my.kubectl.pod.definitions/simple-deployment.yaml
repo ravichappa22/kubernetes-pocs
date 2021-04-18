@@ -6,7 +6,6 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  minReadySeconds: 5
   template:
     metadata:
       labels:

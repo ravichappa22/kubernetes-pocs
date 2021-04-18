@@ -6,9 +6,9 @@ metadata:
   name: webapp-pod
 spec:
   containers:
+      name: webapp
       - image: nginx
       imagePullPolicy: Always
-      name: webapp
       env:
        - name: DB_HOST
          valueFrom:
